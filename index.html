@@ -16,7 +16,7 @@
   <!-- local stylesheet -->
   <link href="./public/style.css" rel="stylesheet" />
   <!-- local script -->
-  <script src="./public/script.js" defer></script>
+  <script type="module" src="./public/script.js" defer></script>
 </head>
 
 <body>
@@ -27,28 +27,29 @@
     <section class="input">
       <div class="input-container">
         <h3>Bill</h3>
-        <input type="text" placeholder="0">
+        <input type="text" placeholder="0" maxLength="10">
         <img src="./images/icon-dollar.svg" alt="dollar-sign" class="icon">
       </div>
 
       <div class="input-container">
         <h3>Select Tip %</h3>
         <div class="buttons">
-          <div class="button">5%</div>
-          <div class="button">10%</div>
-          <div class="button">15%</div>
-          <div class="button">25%</div>
-          <div class="button">50%</div>
-          <div class="button button-light">Custom</div>
+          <button class="btn" data-value="0.05">5%</button>
+          <button class="btn" data-value="0.1">10%</button>
+          <button class="btn" data-value="0.15">15%</button>
+          <button class="btn" data-value="0.25">25%</button>
+          <button class="btn" data-value="0.5">50%</button>
+          <input type="text" name="custom" id="custom" placeholder="Custom" value="">
         </div>
       </div>
 
       <div class="input-container">
         <h3>Number of People</h3>
-        <input type="text" placeholder="0">
+        <input type="text" id="people" placeholder="0" maxLength="5">
         <img src="./images/icon-person.svg" alt="person" class="icon">
       </div>
     </section>
+
     <section class="output">
       <div>
         <div class="output-container">
@@ -56,7 +57,7 @@
           <h3>Tip Amount</h3>
           <small>/ person</small>
           </div>
-          <h2 class="output-display">$0.00</h2>
+          <h2 class="output-display" id="tip">$0.00</h2>
         </div>
 
         <div class="output-container">
@@ -64,7 +65,7 @@
           <h3>Total</h3>
           <small>/ person </small>
           </div>
-          <h2 class="output-display">$0.00</h2>
+          <h2 class="output-display" id="total">$0.00</h2>
         </div>
       </div>
 
