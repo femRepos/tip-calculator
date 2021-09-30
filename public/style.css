@@ -37,8 +37,7 @@ header {
 
 /* main */
 main {
-    /* change the width property to 'max-width' and fix the layout bug' */
-    width: 920px;
+    max-width: 920px;
     padding: 32px 32px 32px 50px;
     background-color: var(--white);
     border-radius: 25px;
@@ -69,7 +68,7 @@ section {
 }
 
 .input-container:last-of-type {
-    margin-bottom: 0;
+    margin-bottom: 15px;
 }
 
 h3 {
@@ -141,7 +140,7 @@ h3 {
 
 button.btn {
     width: 31%;
-    height: 48px;
+    height: 45px;
     border-radius: 5px;
     background-color: var(--very-dark-cyan);
     color: var(--white);
@@ -178,7 +177,6 @@ button.btn:hover,
     width: 50%;
     background-color: var(--very-dark-cyan);
     border-radius: 15px;
-    height: 417px;
     padding: 60px 40px 40px;
     display: flex;
     flex-direction: column;
@@ -194,7 +192,7 @@ button.btn:hover,
 .output-label {
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    justify-content: space-around;
 }
 
 .output h3 {
@@ -211,7 +209,7 @@ button.btn:hover,
     color: var(--strong-cyan);
     font-weight: bold;
     font-size: 3rem;
-    line-height: 3rem;
+    line-height: 1;
 }
 
 [type="button"] {
@@ -226,4 +224,55 @@ button.btn:hover,
     background-color: hsl(183, 100%, 20%);
     color: hsl(183, 100%, 15%, 0.5);
     cursor: default;
+}
+
+
+/* media queries */
+
+@media only screen and (max-width: 850px) {
+    /* header */
+    header {
+        margin: 45px 0 40px;
+    }
+
+    /* main */
+    main {
+        padding: 30px;
+        flex-direction: column;
+        margin-bottom: 0;
+        border-bottom-left-radius: 0;
+        border-bottom-right-radius: 0;
+    }
+
+    .input {
+        width: 100%;
+    }
+
+    .input {
+        margin-top: 0;
+        margin-bottom: 15px;
+    }
+
+    button.btn,
+    #custom {
+        width: 47%;
+    }
+
+    .output {
+        width: calc(100% + 20px);
+        transform: translateX(-10px);
+        padding: 40px 25px 25px;
+    }
+
+    .output-container {
+        margin-bottom: 25px;
+    }
+
+    .output-display {
+        font-size: 2rem;
+    }
+
+    [type="button"] {
+        margin-top: 10px;
+    }
 }

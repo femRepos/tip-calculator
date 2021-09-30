@@ -58,6 +58,7 @@ function checkAllValues() {
     try {
         selectedTip = document.querySelector('.selected').dataset.value
     } catch (e) {
+        // if the selected tip doesn't have a dataset, they it must be an input so retrieve the direct value instead
         selectedTip = document.querySelectorAll('[type="text"]')[1].value
     }
 
@@ -77,10 +78,10 @@ function checkAllValues() {
 
 // always be alert for when all values have been entered
 document.addEventListener('mousedown', () => {
-    setTimeout(checkAllValues, 5)
+    setTimeout(checkAllValues, 0)
 })
 document.addEventListener('keydown', () => {
-    setTimeout(checkAllValues, 5)
+    setTimeout(checkAllValues, 0)
 })
 
 // reset all values
