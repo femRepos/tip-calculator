@@ -63,7 +63,7 @@ function checkAllValues() {
         selectedTip = document.querySelectorAll('[type="text"]')[1].value
     }
 
-    if (bill && Number(people) > 0 && selectedTip) {
+    if (Number(bill) >= 0 && Number(people) > 0 && selectedTip) {
         let waiter = calculator(bill, selectedTip, people)
         let totalElement = document.getElementById('total')
         let tipElement = document.getElementById('tip')
