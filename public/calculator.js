@@ -2,9 +2,9 @@
 export default function (bill, tip, numOfPeople) {
     return {
         // make sure all values are numbers
-        bill : Number(bill),
-        tip : Number(tip),
-        numOfPeople : Number(numOfPeople),
+        bill: Number(bill),
+        tip: Number(tip),
+        numOfPeople: Number(numOfPeople),
         getTotal() {
             // return the total bill for one person & the tip for one person
             let eachBill = this.bill / this.numOfPeople

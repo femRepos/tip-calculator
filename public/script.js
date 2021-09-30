@@ -37,12 +37,10 @@ document.querySelector('.buttons input').addEventListener('focus', e => {
 
 // validate number of people to avoid divided by zero error
 function alertError(e) {
-    if(!e.target.value || e.target.value == 0 || !e.key) {
+    if (!e.target.value || e.target.value == 0 || !e.key) {
         e.target.parentElement.classList.add('error')
         e.target.classList.add('error')
-    }
-
-    else if (Number(e.target.value) > 0) {
+    } else if (Number(e.target.value) > 0) {
         e.target.parentElement.classList.remove('error')
         e.target.classList.remove('error')
     }
@@ -59,7 +57,7 @@ function checkAllValues() {
     let selectedTip
     try {
         selectedTip = document.querySelector('.selected').dataset.value
-    } catch(e) {
+    } catch (e) {
         selectedTip = document.querySelectorAll('[type="text"]')[1].value
     }
 

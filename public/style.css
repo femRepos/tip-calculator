@@ -133,7 +133,7 @@ h3 {
     flex-wrap: wrap;
 }
 
-.buttons:first-of-type{
+.buttons:first-of-type {
     margin-bottom: 15px;
 }
 
@@ -166,7 +166,7 @@ button.btn:hover,
     color: var(--dark-grayish-cyan);
 }
 
-.btn.selected{
+.btn.selected {
     background-color: var(--strong-cyan);
     color: var(--very-dark-cyan);
 }
@@ -221,7 +221,7 @@ button.btn:hover,
     font-size: 1.25rem;
 }
 
-[type='button']:disabled{
+[type='button']:disabled {
     background-color: hsl(183, 100%, 20%);
     color: hsl(183, 100%, 15%, 0.5);
     cursor: default;
